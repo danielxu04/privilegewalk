@@ -10,6 +10,18 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
+    //console.log('reducer', state, action);
+
+    // in reducer, create new objects, do not mutate old objects
+    switch (action.type){
+        case "next_question": {
+            return {
+                ...state,
+                // override currentQuestionIndex
+                currentQuestionIndex: state.currentQuestionIndex + 1,
+            }
+        }
+    }
     return state;
 };
 

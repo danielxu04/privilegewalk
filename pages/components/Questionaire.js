@@ -1,6 +1,8 @@
 import {useContext} from 'react';
 import { QuestionaireContext } from '../contexts/questionaire';
 
+import Question from './Question';
+
 const Questionaire = () => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
@@ -10,6 +12,7 @@ const Questionaire = () => {
             <div className="block text-center text-white">
                 Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
             </div>
+            <Question />
         </div>
     );
 }

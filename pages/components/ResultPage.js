@@ -7,9 +7,18 @@ function ResultPage(){
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
     return (
-        <div className="bg-white p-4">
-            Your Privilege Score is: {Math.round(questionaireState.privilegeCount / questionaireState.questions.length)}%
-        </div>
+        <Wrapper>
+            <div className="bg-white p-4">
+                Your Privilege Score is: {Math.round(questionaireState.privilegeCount / questionaireState.questions.length)}%
+            </div>
+            <div 
+                className="w-[10vw] bg-white mt-10 text-center hover:cursor-pointer hover:scale-110"
+                onClick={() => dispatch({ type: 'restart' })}
+            >
+                Restart
+            </div>
+        </Wrapper>
+        
     );
 }
 

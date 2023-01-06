@@ -10,7 +10,7 @@ const initialState = {
     // show result page?
     isComplete: false,
     // privilege counter
-    privilegeCount: 1
+    privilegeCount: 0
 };
 
 const reducer = (state, action) => {
@@ -29,6 +29,13 @@ const reducer = (state, action) => {
                 currentQuestionIndex,
                 isComplete,
             }
+        }
+        case "restart": {
+            // restarting application so return initial state
+            return initialState;
+        }
+        default: {
+            return state;
         }
     }
     return state;

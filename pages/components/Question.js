@@ -1,6 +1,7 @@
 const Question = () => {
     return (
-        <div></div>
+        <div>
+        </div>
     );
 }
 

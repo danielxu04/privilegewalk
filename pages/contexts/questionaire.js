@@ -8,7 +8,9 @@ const initialState = {
     // maintain the current question's array index
     currentQuestionIndex: 0,
     // show result page?
-    isComplete: false
+    isComplete: false,
+    // privilege counter
+    privilegeCount: 1
 };
 
 const reducer = (state, action) => {

@@ -3,13 +3,17 @@ import { QuestionaireContext } from '../contexts/questionaire';
 import Wrapper from '../helpers/Wrapper';
 
 import Question from './Question';
+import ResultPage from './ResultPage';
 
 const Questionaire = () => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
     //console.log('questionaireState', questionaireState)
     return (
-        <div className="items-center flex flex-col">
+        <Wrapper>
+            {questionaireState.isComplete && (
+                <ResultPage />
+            )}
             {!questionaireState.isComplete && (
                 <div className="items-center flex flex-col">
                     <div className="block text-center text-white">
@@ -24,7 +28,7 @@ const Questionaire = () => {
                     </div>
                 </div>
             )}
-        </div>
+        </Wrapper>
     );
 }
 

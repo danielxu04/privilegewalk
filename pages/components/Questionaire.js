@@ -4,11 +4,12 @@ import Wrapper from '../helpers/Wrapper';
 
 import Question from './Question';
 import ResultPage from './ResultPage';
+import Answer from './Answer';
 
 const Questionaire = () => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
-    //console.log('questionaireState', questionaireState)
+    console.log('questionaireState', questionaireState)
     return (
         <Wrapper>
             {questionaireState.isComplete && (
@@ -20,12 +21,7 @@ const Questionaire = () => {
                         Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
                     </div>
                     <Question />
-                    <div 
-                        className="w-[10vw] bg-white mt-10 text-center hover:cursor-pointer hover:scale-110"
-                        onClick={() => dispatch({ type: "next_question" })}
-                    >
-                        Next
-                    </div>
+                    <Answer onAnswerText={(answerText) => dispatch({type: "select_answer", payload: answerText})}/>
                 </div>
             )}
         </Wrapper>

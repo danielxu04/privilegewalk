@@ -10,7 +10,9 @@ const initialState = {
     // show result page?
     isComplete: false,
     // privilege counter
-    privilegeCount: 0
+    privilegeCount: 0,
+    // current answer
+    currentAnswer: ''
 };
 
 const reducer = (state, action) => {
@@ -18,14 +20,16 @@ const reducer = (state, action) => {
 
     // in reducer, create new objects, do not mutate old objects
     switch (action.type){
-        case "next_question": {
+        case "select_answer": {
+            const privilegeCount = action.payload === "yes" ? state.privilegeCount + 1 : state.privilegeCount;
             // is questionaire complete?
             const isComplete = state.currentQuestionIndex === state.questions.length - 1;
             // compute currentQuestionIndex based on isComplete
             const currentQuestionIndex = isComplete ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
-            return {
+            return{
                 ...state,
-                // override currentQuestionIndex
+                currentAnswer: action.payload,
+                privilegeCount,
                 currentQuestionIndex,
                 isComplete,
             }

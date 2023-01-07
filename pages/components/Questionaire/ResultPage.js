@@ -1,6 +1,6 @@
 import {useContext} from 'react';
-import { QuestionaireContext } from '../contexts/questionaire';
-import Wrapper from '../helpers/Wrapper';
+import { QuestionaireContext } from '../../contexts/questionaire';
+import Wrapper from '../../helpers/Wrapper';
 
 function ResultPage(){
 

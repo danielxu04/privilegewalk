@@ -12,7 +12,9 @@ const initialState = {
     // privilege counter
     privilegeCount: 0,
     // current answer
-    currentAnswer: ''
+    currentAnswer: '',
+    // padding for track movement
+    trackPadding: ''
 };
 
 const reducer = (state, action) => {
@@ -26,12 +28,15 @@ const reducer = (state, action) => {
             const isComplete = state.currentQuestionIndex === state.questions.length - 1;
             // compute currentQuestionIndex based on isComplete
             const currentQuestionIndex = isComplete ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
+            // compute trackPadding based on privilegeCount
+            const trackPadding = "pl-" + (privilegeCount * 3).toString() + "vw";
             return{
                 ...state,
                 currentAnswer: action.payload,
                 privilegeCount,
                 currentQuestionIndex,
                 isComplete,
+                trackPadding,
             }
         }
         case "restart": {

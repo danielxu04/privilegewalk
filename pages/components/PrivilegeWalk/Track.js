@@ -4,11 +4,13 @@ import { QuestionaireContext } from '../../contexts/questionaire';
 
 import WalkingPerson from '../../../public/images/person-walking.jpeg'
 
+
 function Track() {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
     console.log(questionaireState.trackPadding);
+
 
 
     return (

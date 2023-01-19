@@ -15,6 +15,7 @@ const initialState = {
     currentAnswer: '',
     // padding for track movement
     trackPadding: ''
+    
 };
 
 const reducer = (state, action) => {

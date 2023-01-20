@@ -1,26 +1,37 @@
-import { createContext, useEffect, useState } from 'react';
-import { ref, onValue } from 'firebase/database';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { QuestionaireContext } from './questionaire';
+import { ref, onValue, getDatabase, child, get, set } from 'firebase/database';
 import { database } from '../../firebase/firebase';
 
 
-const FirebaseContext = createContext();
-
-export default FirebaseContext;
+export const FirebaseContext = createContext();
 
 export function FirebaseContextProvider({ children }) {
 
+    const [answerMatrix, setAnswerMatrix] = useState(null);
+    
     useEffect(() => {
-        const answersRef = ref(database, 'answers');
-    
-        const unsubscribe = onValue(answersRef, (snapshot) => {
-          const pastAnswers = snapshot.val();
-    
-            console.log(pastAnswers);
+        const dbRef = ref(getDatabase());
+        get(child(dbRef, 'answers')).then((snapshot) => {
+        if (snapshot.exists()) {
+            setAnswerMatrix(snapshot.val());
+        } else {
+            console.log("No data available");
+        }
+        }).catch((error) => {
+        console.error(error);
         });
-    
-        return unsubscribe;
-      }, []);
+    }, []);
 
-    return <FirebaseContext.Provider>{children}</FirebaseContext.Provider>
-    
+
+    function writeUserData() {
+        console.log("writing...");
+        console.log("answerMatrix: ", answerMatrix);
+        set(ref(database, 'answers'),
+            answerMatrix
+        );
+    }
+
+    return <FirebaseContext.Provider value={{answerMatrix, setAnswerMatrix, writeUserData}}>{children}</FirebaseContext.Provider>
 }
+

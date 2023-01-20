@@ -1,5 +1,6 @@
-import {useContext} from 'react';
+import { useContext, useEffect } from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
+import { FirebaseContext } from '../../contexts/database';
 import Wrapper from '../../helpers/Wrapper';
 
 import Question from './Question';
@@ -10,7 +11,24 @@ import Window from '../PrivilegeWalk/Window'
 const Questionaire = () => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
-    console.log('questionaireState', questionaireState)
+    // console.log('questionaireState', questionaireState)
+    // console.log(questionaireState.answerSequence);
+    const firebaseContext = useContext(FirebaseContext);
+
+    
+    useEffect(() => { 
+        if(questionaireState.isComplete){
+            firebaseContext.setAnswerMatrix(
+                [
+                    ...firebaseContext.answerMatrix,
+                    questionaireState.answerSequence
+                ]
+            );
+
+            firebaseContext.writeUserData();
+        }
+    }, [questionaireState.isComplete]);
+
     return (
         <Wrapper>
             {questionaireState.isComplete && (

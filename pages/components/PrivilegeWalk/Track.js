@@ -9,7 +9,7 @@ function Track() {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
-    console.log(questionaireState.trackPadding);
+    // console.log(questionaireState.trackPadding);
 
 
 

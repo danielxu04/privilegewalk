@@ -1,5 +1,6 @@
 import { createContext, useReducer } from 'react';
 import questions from "../questions";
+import { database } from '../../firebase/firebase';
 
 // access questions from our state, so we can access these values globally from context functionality
 const initialState = {
@@ -14,8 +15,9 @@ const initialState = {
     // current answer
     currentAnswer: '',
     // padding for track movement
-    trackPadding: ''
-    
+    trackPadding: '',
+    // array to store answer sequence
+    answerSequence: [],
 };
 
 const reducer = (state, action) => {
@@ -25,6 +27,12 @@ const reducer = (state, action) => {
     switch (action.type){
         case "select_answer": {
             const privilegeCount = action.payload === "yes" ? state.privilegeCount + 1 : state.privilegeCount;
+            // add array values to answer sequence according to user's answer
+            const answerSequence =  action.payload === "yes" 
+                    ?
+                        [...state.answerSequence, "yes"]
+                    : 
+                        [...state.answerSequence, "no"];
             // is questionaire complete?
             const isComplete = state.currentQuestionIndex === state.questions.length - 1;
             // compute currentQuestionIndex based on isComplete
@@ -38,6 +46,7 @@ const reducer = (state, action) => {
                 currentQuestionIndex,
                 isComplete,
                 trackPadding,
+                answerSequence,
             }
         }
         case "restart": {

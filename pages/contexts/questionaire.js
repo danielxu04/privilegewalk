@@ -1,6 +1,5 @@
 import { createContext, useReducer } from 'react';
 import questions from "../questions";
-import { database } from '../../firebase/firebase';
 
 // access questions from our state, so we can access these values globally from context functionality
 const initialState = {
@@ -18,7 +17,48 @@ const initialState = {
     trackPadding: '',
     // array to store answer sequence
     answerSequence: [],
+    // array to store player 1 sequence
+    answerSequenceP1: [],
+    privilegeCount1: 0,
+    padding1: 0,
+    // array to store player 2 sequence
+    answerSequenceP2: [],
+    privilegeCount2: 0,
+    padding2: 0,
+    // array to store player 3 sequence
+    answerSequenceP3: [],
+    privilegeCount3: 0,
+    padding3: 0,
+    // array to store player 4 sequence
+    answerSequenceP4: [],
+    privilegeCount4: 0,
+    padding4: 0,
+    // array to store player 5 sequence
+    answerSequenceP5: [],
+    privilegeCount5: 0,
+    padding5: 0,
+    // array to store player 6 sequence
+    answerSequenceP6: [],
+    privilegeCount6: 0,
+    padding6: 0,
+    // array to store player 7 sequence
+    answerSequenceP7: [],
+    privilegeCount7: 0,
+    padding7: 0,
+    // array to store player 8 sequence
+    answerSequenceP8: [],
+    privilegeCount8: 0,
+    padding8: 0,
+    // array to store player 9 sequence
+    answerSequenceP9: [],
+    privilegeCount9: 0,
+    padding9: 0,
+    // array to store player 10 sequence
+    answerSequenceP10: [],
+    privilegeCount10: 0,
+    padding10: 0,
 };
+
 
 const reducer = (state, action) => {
     //console.log('reducer', state, action);
@@ -39,6 +79,7 @@ const reducer = (state, action) => {
             const currentQuestionIndex = isComplete ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
             // compute trackPadding based on privilegeCount
             const trackPadding = "pl-" + (privilegeCount * 3).toString() + "vw";
+            
             return{
                 ...state,
                 currentAnswer: action.payload,

@@ -14,7 +14,10 @@ module.exports = {
         interMedium: ["Inter Medium", "sans-serif"], 
         interBold: ["Inter Bold", "sans-serif"], 
         interSemiBold: ["Inter SemiBold", "sans-serif"], 
-        interThin: ["Inter Thin", "sans-serif"]
+        interThin: ["Inter Thin", "sans-serif"],
+        montserratRegular: ["Montserrat Regular", "sans-serif"],
+        montserratMedium: ["Montserrat Medium", "sans-serif"],
+        montserratBold: ["Montserrat Bold", "sans-serif"],
       },
     },
   },

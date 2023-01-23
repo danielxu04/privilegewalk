@@ -5,7 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        latoRegular: ["Lato Regular", "sans-serif"],
+        latoBold: ["Lato Bold", "sans-serif"],
+        latoThin: ["Lato Thin", "sans-serif"], 
+        interRegular: ["Inter Regular", "sans-serif"],
+        interMedium: ["Inter Medium", "sans-serif"], 
+        interBold: ["Inter Bold", "sans-serif"], 
+        interSemiBold: ["Inter SemiBold", "sans-serif"], 
+        interThin: ["Inter Thin", "sans-serif"]
+      },
+    },
   },
   plugins: [],
 }

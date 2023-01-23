@@ -22,7 +22,8 @@ const Questionaire = () => {
                     questionaireState.answerSequence
                 ]
             );
-
+            console.log("prewriting answermatrix", firebaseContext.answerMatrix);
+            // write function is executing before the answerMatrix has been updated
             firebaseContext.writeUserData();
         }
     }, [questionaireState.isComplete]);

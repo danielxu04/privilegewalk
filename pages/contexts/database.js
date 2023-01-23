@@ -95,9 +95,7 @@ export function FirebaseContextProvider({ children }) {
         setPrivilegeCount9(answerList9[currentQuestionIndexv2] === "yes" ? privilegeCount9 + 1 : privilegeCount9);
         setPadding9("pl-" + (privilegeCount9 * 3).toString() + "vw"); 
         setPrivilegeCount10(answerList10[currentQuestionIndexv2] === "yes" ? privilegeCount10 + 1 : privilegeCount10);
-        setPadding10("pl-" + (privilegeCount10 * 3).toString() + "vw"); 
-        console.log(padding1);
-        console.log(padding6);
+        setPadding10("pl-" + (privilegeCount10 * 3).toString() + "vw");
         }
     
     function restartApp(){

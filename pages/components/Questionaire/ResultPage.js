@@ -11,7 +11,7 @@ function ResultPage(){
     return (
         <Wrapper>
             <div className="bg-white p-4">
-                Your Privilege Score is: {((questionaireState.privilegeCount / questionaireState.questions.length) * 100).toFixed(2)}
+                Your Privilege Score is: {((questionaireState.privilegeCount / questionaireState.questions.length) * 100).toFixed(2)}%
             </div>
             <div 
                 className="w-[10vw] bg-white mt-10 text-center hover:cursor-pointer hover:scale-110"

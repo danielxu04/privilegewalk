@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import React, { useContext } from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
 
 const Question = () => {
@@ -8,9 +8,9 @@ const Question = () => {
     const currentQuestion = questionaireState.questions[questionaireState.currentQuestionIndex];
 
     return (
-        <div>
-            <div className="bg-white text-center pt-10">{currentQuestion.question}</div>
-        </div>
+        <React.Fragment>
+            <div className="flex justify-center items-center text-center px-10 py-5 w-[60vw] h-[7vw] mt-3 darkblue-text font-interSemiBold text-2xl cream-boxshadow cream-background rounded-xl">{currentQuestion.question}</div>
+        </React.Fragment>
     );
 }
 

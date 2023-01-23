@@ -10,7 +10,7 @@ function Window(){
     const firebaseContext = useContext(FirebaseContext);
 
     return (
-        <div className="flex flex-col m-[5vw]">
+        <div className="flex flex-col mx-[5vw] mt-[3vw] mb-[1vw]">
             <Track playerPadding={firebaseContext.padding1}/>
             <Track playerPadding={firebaseContext.padding2}/>
             <Track playerPadding={firebaseContext.padding3}/>

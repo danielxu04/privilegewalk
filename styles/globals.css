@@ -158,5 +158,39 @@ body{
   transition: 1s;
   padding-left: 84vw;
 }
+.darkblue-text{
+  color: #0A2647;
+}
+.cream-text{
+  color: #e8e3c9;
+}
+.cream-background{
+  background-color: #e8e3c9;
+}
+.cream-textshadow{
+  text-shadow: 0 0 3px #e8e3c9;
+}
+.cream-boxshadow{
+  box-shadow: 0 0 7px #e8e3c9;
+}
+.transition-075s{
+  transition: 0.75s;
+}
+.transition-050s{
+  transition: 0.5s;
+}
+
+
+
+/************************************************** BUTTON *****************************************************/
+.answer-btn{
+  transition: 0.5s;
+}
+.answer-btn:hover{
+  transition: 0.5s;
+  background-color: #f1ecd6;
+  box-shadow: 0 0 5px #f1ecd6;
+  color: #0A2647;
+}
 
 

@@ -6,6 +6,7 @@ import Question from './Question';
 import ResultPage from './ResultPage';
 import Answer from './Answer';
 import Window from '../PrivilegeWalk/Window';
+import StartPage from '../StartPage/StartPage';
 
 const Questionaire = () => {
 
@@ -30,14 +31,17 @@ const Questionaire = () => {
 
     return (
         <Wrapper>
+            {questionaireState.startClicked && (
+                <StartPage/>
+            )}
             {questionaireState.isComplete && (
                 <ResultPage />
             )}
-            {!questionaireState.isComplete && (
+            {!questionaireState.isComplete && !questionaireState.startClicked && (
                 <Wrapper>
                     <Window />
                     <div className="items-center flex flex-col">
-                        <div className="block text-center text-white">
+                        <div className="block text-center text-white text-3xl font-latoBold cream-textshadow cream-text">
                             Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
                         </div>
                         <Question />

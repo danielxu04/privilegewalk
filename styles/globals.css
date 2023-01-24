@@ -193,6 +193,9 @@ body{
 .darkcream-textshadow{
   text-shadow: 0 0 2px #e7dfb6;
 }
+.darkcream-textshadow-lg{
+  text-shadow: 0 0 7px #e7dfb6;
+}
 .cream-boxshadow{
   box-shadow: 0 0 7px #e8e3c9;
 }

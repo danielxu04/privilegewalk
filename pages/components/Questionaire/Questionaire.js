@@ -29,6 +29,13 @@ const Questionaire = () => {
         }
     }, [questionaireState.isComplete]);
 
+    useEffect(() => {
+        if (questionaireState.isComplete) {
+            firebaseContext.writeUserData();
+        }
+    }, [questionaireState.isComplete, firebaseContext.answerMatrix]);
+    
+
     return (
         <Wrapper>
             {questionaireState.startClicked && (

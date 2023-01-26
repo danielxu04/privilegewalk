@@ -50,7 +50,7 @@ const questions = [
     {
         id: 7,
         questionNumber: '7',
-        question: "When I am angry or emotional, people do not dismiss my opinions as symptoms of “that time of the month.",
+        question: "When I am angry or emotional, people do not dismiss my opinions as symptoms of 'that time of the month'.",
         type: "GENDER",
         answer: false,
         z: 'z-24'

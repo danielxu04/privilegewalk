@@ -18,14 +18,17 @@ export function FirebaseContextProvider({ children }) {
     const [answerList7, setAnswerList7] = useState(null);
     const [answerList8, setAnswerList8] = useState(null);
     const [answerList9, setAnswerList9] = useState(null);
-    const [answerList10, setAnswerList10] = useState(null);
+    const [answerList10, setAnswerList10] = useState(null); 
+/*
+    const [loadDatabase, setLoadDatabase] = useState();
+    const [averageScore, setAverageScore] = useState();
 
-    
+    const scoreMap = new Map();
+*/   
     useEffect(() => {
         const dbRef = ref(getDatabase());
         get(child(dbRef, 'answers')).then((snapshot) => {
         if (snapshot.exists()) {
-
             const readData = snapshot.val();
 
             console.log(readData);
@@ -49,6 +52,17 @@ export function FirebaseContextProvider({ children }) {
         console.error(error);
         });
     }, []);
+/*
+    function averagePrivilegeScore(){
+        for(i = 0; i < loadDatabase.length; i++){
+            for(j = 0; j < 28; j++){
+                if(loadDatabase[i][j] === "yes"){
+                    
+                };
+            }
+        }
+    }
+*/
 
     const[privilegeCount1, setPrivilegeCount1] = useState(0);
     const[privilegeCount2, setPrivilegeCount2] = useState(0);
@@ -128,6 +142,7 @@ export function FirebaseContextProvider({ children }) {
             answerMatrix
         );
     }
+    
 
     return <FirebaseContext.Provider 
                 value={{answerMatrix, setAnswerMatrix, writeUserData, answerList1, answerList2, 

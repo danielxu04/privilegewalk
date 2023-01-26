@@ -199,6 +199,9 @@ body{
 .cream-boxshadow{
   box-shadow: 0 0 7px #e8e3c9;
 }
+.cream-boxshadow-lg{
+  box-shadow: 0 0 25px #e8e3c9;
+}
 .transition-075s{
   transition: 0.75s;
 }
@@ -227,6 +230,14 @@ body{
   background-color: #e7dfb6;
   box-shadow: 0 0 5px #e7dfb6;
   color: #0A2647;
+}
+
+/************************************************* TRACK BG ****************************************************/
+.track-bg{
+  background: #000313d0;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #000000, #262626);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #000000, #262626); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 
 

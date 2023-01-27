@@ -24,8 +24,7 @@ const WalkingPerson = (props) => {
       anime({
         targets: personRef.current,
         rotate: '0.04turn',
-        duration: 500,
-        loop: true,
+        duration: 1000,
         direction: 'alternate',
         easing: 'easeInOutQuad'
       });

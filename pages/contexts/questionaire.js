@@ -19,8 +19,8 @@ const initialState = {
     answerSequence: [],
     // boolean for start
     startClicked: true,
-    // walk animation?
-    walk: false
+    // player walk boolean
+    walk: false,
 };
 
 
@@ -43,6 +43,8 @@ const reducer = (state, action) => {
             const currentQuestionIndex = isComplete ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
             // compute trackPadding based on privilegeCount
             const trackPadding = "pl-" + (privilegeCount * 3).toString() + "vw";
+            // change walk boolean depending on player answerSequence
+            const walk = action.payload === "yes" ? true : false;
             
             return{
                 ...state,
@@ -52,11 +54,19 @@ const reducer = (state, action) => {
                 isComplete,
                 trackPadding,
                 answerSequence,
+                walk
             }
         }
         case "restart": {
             // restarting application so return initial state
             return initialState;
+        }
+        case "reset_walk": {
+            const walk = false;
+            return {
+                ... state,
+                walk
+            }
         }
         case "start": {
             const startClicked = false;

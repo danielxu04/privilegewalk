@@ -76,7 +76,7 @@ function Window(){
             />
             <PlayerTrack 
                 playerPadding={questionaireState.trackPadding}
-                walkBool={firebaseContext.walk}
+                walkBool={questionaireState.walk}
                 setWalkBool={firebaseContext.setWalk} 
                 playerImage={WalkingMan}
             />

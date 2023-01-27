@@ -3,18 +3,21 @@ import anime from 'animejs';
 import Image from 'next/image'
 
 import { FirebaseContext } from '../../contexts/database';
+import { QuestionaireContext } from '../../contexts/questionaire';
 import WalkingMan from '../../../public/images/walking-man.png'
 
 
 const WalkingPerson = (props) => {
 
   const firebaseContext = useContext(FirebaseContext);
+  const [questionaireState, dispatch] = useContext(QuestionaireContext);
   const personRef = useRef(null);
 
   function handleClick() {
-    setTimeout(() => {
       props.setWalkBool(false);
-    }, 0);
+      () => {
+        dispatch({ type: 'reset_walk' });
+      }
   }
   console.log(props.walkBool);
 

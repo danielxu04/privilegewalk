@@ -11,8 +11,6 @@ function Track(props) {
 
     // console.log(questionaireState.trackPadding);
 
-
-
     return (
         <div className="flex text-white text-2xl pt-2 px-2 darkcream-border border-b-2 w-[100%]">
             <div className={`flex ${props.playerPadding}`}>

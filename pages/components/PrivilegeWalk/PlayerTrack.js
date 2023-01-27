@@ -5,7 +5,7 @@ import WalkingPerson from './WalkingPerson';
 
 
 
-function Track(props) {
+function PlayerTrack(props) {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
@@ -14,13 +14,12 @@ function Track(props) {
 
 
     return (
-        <div className="flex text-white text-2xl pt-2 px-2 darkcream-border border-b-2 w-[100%]">
+        <div className="flex text-white text-2xl pt-5 px-2 z-10 player-track darkcream-border border-b-2 w-[100%]">
             <div className={`flex ${props.playerPadding}`}>
-                {/*<Image src={props.playerImage} className={`w-[2vw]`} alt="person"/>*/}
-                <WalkingPerson walkBool={props.walkBool} setWalkBool={props.setWalkBool}/>
+                <Image src={props.playerImage} className="w-[2.2vw] invert-img" alt="person"/>
             </div>
         </div>
     )
 }
 
-export default Track;
+export default PlayerTrack;

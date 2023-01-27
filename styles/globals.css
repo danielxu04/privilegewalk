@@ -232,11 +232,25 @@ body{
   color: #0A2647;
 }
 
-/************************************************* TRACK BG ****************************************************/
-.track-bg{
-  background: #1d2436;  /* fallback for old browsers */
-  background: linear-gradient(to right, #000510, #1d2436); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+/************************************************* TRACK ****************************************************/
+.track{
+  /*
+  background: #1d2436;  
+  background: linear-gradient(to right, #1f273bc1, #416d87bf, #e7dfb69e); */
+  background: #000000;
+}
+.player-track{
+  /*
+  background: #1d2436;  
+  background: linear-gradient(to left, #1f273bc1, #e3ddbfbb, #e7dfb65d);
+  */
+  background: #000000;
+}
+.darkcream-border{
+  border-color: #e5e0c5;
+}
+.invert-img{
+  transform: scaleX(-1);
 }
 
 

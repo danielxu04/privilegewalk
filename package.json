@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "animejs": "^3.2.1",
     "firebase": "^9.15.0",
     "next": "13.1.1",
     "react": "18.2.0",

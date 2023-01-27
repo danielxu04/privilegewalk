@@ -19,6 +19,8 @@ const initialState = {
     answerSequence: [],
     // boolean for start
     startClicked: true,
+    // walk animation?
+    walk: false
 };
 
 
@@ -68,7 +70,6 @@ const reducer = (state, action) => {
             return state;
         }
     }
-    return state;
 };
 
 export const QuestionaireContext = createContext();

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { QuestionaireContext  } from '../../contexts/questionaire';
+import StartButton2 from './StartButton2';
+import StartButton from './StartButton';
 
 function StartPage(){
 
@@ -20,12 +22,14 @@ function StartPage(){
                     In the following questionaire, you will answer a sequence of questions, which will aim to measure your privilege compared to 
                     <strong className="darkcream-text darkcream-textshadow">  10 other users</strong>, in a virtual privilege walk simulation. Let's go!
                 </p>
-
+                {/*
                 <div 
                 className="hover:cursor-pointer hover:scale-105 px-3 py-2 font-interMedium text-lg transition-050s justify-center rounded-lg cream-background start-btn w-[8vw]" 
                 onClick={() => dispatch({ type: 'start' })}>
                     Start
                 </div>
+                <StartButton /> */}
+                <StartButton2 />
             </div>
         </React.Fragment>
     );

@@ -1,7 +1,6 @@
 import { useContext } from 'react';
-import WalkingWoman from '../../../public/images/walking-woman.png';
 import WalkingMan from '../../../public/images/walking-man.png';
-import AfricanWalkingMan from '../../../public/images/african-walking-man.PNG';
+import AfricanWalkingMan from '../../../public/images/african-walking-man.png';
 
 import Track from './Track';
 import PlayerTrack from './PlayerTrack';

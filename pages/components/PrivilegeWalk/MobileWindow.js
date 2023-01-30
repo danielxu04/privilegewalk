@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-
 import MobileTrack from "./MobileTrack";
 import MobilePlayerTrack from './MobilePlayerTrack';
 import { FirebaseContext } from '../../contexts/database';

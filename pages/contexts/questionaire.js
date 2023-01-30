@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-import questions from "../questions";
+import { questions } from "../questions";
 
 // access questions from our state, so we can access these values globally from context functionality
 const initialState = {
@@ -87,10 +87,6 @@ const reducer = (state, action) => {
     }
 };
 
-function q(){
-    return console.log("importing questionaire context");
-}
-
 export const QuestionaireContext = createContext();
 
 // children is our application. we are wrapping context around our entire app
@@ -99,4 +95,4 @@ export const QuestionaireProvider = ({ children }) => {
     return <QuestionaireContext.Provider value={value}>{children}</QuestionaireContext.Provider>;
 };
 
-export default q;
+export default () => null;

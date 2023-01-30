@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
     {
         id: 1,
         questionNumber: '1',
@@ -226,4 +226,4 @@ const questions = [
 ]
 
 
-export default questions;
+export default () => null;

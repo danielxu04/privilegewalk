@@ -3,9 +3,7 @@ import { ref, getDatabase, child, get, set } from 'firebase/database';
 import { database } from '../../firebase/firebase';
 
 
-function db(){
-    return console.log("import database context");
-}
+
 
 export const FirebaseContext = createContext();
 
@@ -203,5 +201,5 @@ export function FirebaseContextProvider({ children }) {
             </FirebaseContext.Provider>
 }
 
-export default db;
+export default () => null;
 

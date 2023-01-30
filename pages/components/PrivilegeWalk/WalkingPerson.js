@@ -2,13 +2,10 @@ import React, { useEffect, useRef, useContext } from 'react';
 import anime from 'animejs';
 import Image from 'next/image'
 
-import { FirebaseContext } from '../../contexts/database';
 import { QuestionaireContext } from '../../contexts/questionaire';
 
 
 const WalkingPerson = (props) => {
-
-  const firebaseContext = useContext(FirebaseContext);
   const [questionaireState, dispatch] = useContext(QuestionaireContext);
   const personRef = useRef(null);
 

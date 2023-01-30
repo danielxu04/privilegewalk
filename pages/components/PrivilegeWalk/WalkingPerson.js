@@ -39,7 +39,7 @@ const WalkingPerson = (props) => {
   return (
     <div className="person-container">
       <div ref={personRef} className="person">
-        <Image className="invert-img w-[2.2vw]" src={WalkingMan} alt="Walking woman" width=""/>
+        <Image className="invert-img w-[2.2vw]" src={props.image} width=""/>
       </div>
     </div>
   );

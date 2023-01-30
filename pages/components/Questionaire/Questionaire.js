@@ -6,6 +6,7 @@ import Question from './Question';
 import ResultPage from './ResultPage';
 import Answer from './Answer';
 import Window from '../PrivilegeWalk/Window';
+import MobileWindow from '../PrivilegeWalk/MobileWindow';
 import StartPage from '../StartPage/StartPage';
 
 const Questionaire = () => {
@@ -46,6 +47,7 @@ const Questionaire = () => {
             )}
             {!questionaireState.isComplete && !questionaireState.startClicked && (
                 <Wrapper>
+                    <MobileWindow />
                     <Window />
                     <div className="items-center flex flex-col">
                         <div className="block text-2xl text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">

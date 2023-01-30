@@ -8,13 +8,11 @@ const Question = () => {
     const currentQuestion = questionaireState.questions[questionaireState.currentQuestionIndex];
 
     return (
-        <React.Fragment>
-            <div 
-            className="flex justify-center items-center text-center px-10 py-5 w-[60vw] h-[7vw] mt-3 darkblue-text font-interSemiBold  
-            cream-boxshadow cream-background rounded-xl xl:text-2xl">
+        <div 
+            className="flex justify-center h-[25vw] w-[85vw] items-center text-sm text-center p-3 mt-2 mx-[5vw] darkblue-text font-interSemiBold  
+            cream-boxshadow cream-background rounded-xl xl:text-2xl xl:w-[60vw] xl:h-[7vw] xl:px-10 xl:py-5 xl:mt-3">
                 {currentQuestion.question}
-            </div>
-        </React.Fragment>
+        </div>
     );
 }
 

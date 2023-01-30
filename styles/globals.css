@@ -197,7 +197,7 @@ body{
   text-shadow: 0 0 7px #e7dfb6;
 }
 .cream-boxshadow{
-  box-shadow: 0 0 7px #e8e3c9;
+  box-shadow: 0 0 10px #e8e3c9;
 }
 .cream-boxshadow-lg{
   box-shadow: 0 0 25px 0 #e4dfc1;
@@ -217,8 +217,8 @@ body{
 }
 .answer-btn:hover{
   transition: 0.5s;
-  background-color: #f1ecd6;
-  box-shadow: 0 0 5px #f1ecd6;
+  background-color: #e7dfb6;
+  box-shadow: 0 0 5px #e7dfb6;
   color: #0A2647;
 }
 
@@ -237,14 +237,14 @@ body{
   /*
   background: #1d2436;  
   background: linear-gradient(to right, #1f273bc1, #416d87bf, #e7dfb69e); */
-  background: #000000;
+  background: #0f1112;
 }
 .player-track{
   /*
   background: #1d2436;  
   background: linear-gradient(to left, #1f273bc1, #e3ddbfbb, #e7dfb65d);
   */
-  background: #000000;
+  background: #1a1c1fcf;
 }
 .darkcream-border{
   border-color: #e5e0c5;

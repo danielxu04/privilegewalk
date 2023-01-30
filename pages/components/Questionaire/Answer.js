@@ -9,16 +9,16 @@ const Answer = ({onAnswerText}) => {
     return (
         <div className="flex flex-row w-full justify-center mt-5">
             <div 
-                className="flex pr-2 w-[10vw] cream-background justify-center hover:cursor-pointer hover:scale-105 mx-3 p-2 rounded-lg font-interMedium
-                darkblue-text answer-btn"
+                className="flex px-[6vw] cream-background justify-center hover:cursor-pointer hover:scale-105 mx-4 p-2 rounded-lg font-interMedium
+                darkblue-text answer-btn xl:w-[10vw] xl:px-0"
                 onClick={() => {onAnswerText("yes"); firebaseContext.setCurrentQuestionIndexv2(firebaseContext.currentQuestionIndexv2 + 1);
                 firebaseContext.changePadding();}}
             >
                 Yes
             </div>
             <div 
-                className="pl-2 flex w-[10vw] cream-background justify-center hover:cursor-pointer hover:scale-105 mx-3 p-2 rounded-lg font-interMedium
-                darkblue-text answer-btn"
+                className="flex cream-background px-[7vw] justify-center hover:cursor-pointer hover:scale-105 mx-4 p-2 rounded-lg font-interMedium
+                darkblue-text answer-btn xl:w-[10vw] xl:px-0"
                 onClick={() => {onAnswerText("no"); 
                                 firebaseContext.setCurrentQuestionIndexv2(firebaseContext.currentQuestionIndexv2 + 1);
                                 firebaseContext.changePadding();}}

@@ -13,7 +13,7 @@ function Window(){
     const firebaseContext = useContext(FirebaseContext);
 
     return (
-        <div className="flex flex-col mx-[5vw] mt-[3vw] mb-[2vw] border-2 track rounded-md darkcream-border cream-boxshadow-lg">
+        <div className="hidden lg:flex flex-col mx-[5vw] mt-[3vw] mb-[2vw] border-2 track rounded-md darkcream-border cream-boxshadow-lg">
             <Track  
                 playerPadding={firebaseContext.padding1}
                 walkBool={firebaseContext.walk1} 

@@ -48,7 +48,7 @@ const Questionaire = () => {
                 <Wrapper>
                     <Window />
                     <div className="items-center flex flex-col">
-                        <div className="block text-center text-white text-3xl font-latoBold cream-textshadow cream-text">
+                        <div className="block text-2xl text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">
                             Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
                         </div>
                         <Question />

@@ -9,7 +9,11 @@ const Question = () => {
 
     return (
         <React.Fragment>
-            <div className="flex justify-center items-center text-center px-10 py-5 w-[60vw] h-[7vw] mt-3 darkblue-text font-interSemiBold text-2xl cream-boxshadow cream-background rounded-xl">{currentQuestion.question}</div>
+            <div 
+            className="flex justify-center items-center text-center px-10 py-5 w-[60vw] h-[7vw] mt-3 darkblue-text font-interSemiBold  
+            cream-boxshadow cream-background rounded-xl xl:text-2xl">
+                {currentQuestion.question}
+            </div>
         </React.Fragment>
     );
 }

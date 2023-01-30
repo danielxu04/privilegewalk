@@ -9,18 +9,18 @@ export const FirebaseContext = createContext();
 
 export function FirebaseContextProvider({ children }) {
 
-    const [answerMatrix, setAnswerMatrix] = useState(null);
+    const [answerMatrix, setAnswerMatrix] = useState();
 
-    const [answerList1, setAnswerList1] = useState(null);
-    const [answerList2, setAnswerList2] = useState(null);
-    const [answerList3, setAnswerList3] = useState(null);
-    const [answerList4, setAnswerList4] = useState(null);
-    const [answerList5, setAnswerList5] = useState(null);
-    const [answerList6, setAnswerList6] = useState(null);
-    const [answerList7, setAnswerList7] = useState(null);
-    const [answerList8, setAnswerList8] = useState(null);
-    const [answerList9, setAnswerList9] = useState(null);
-    const [answerList10, setAnswerList10] = useState(null); 
+    const [answerList1, setAnswerList1] = useState();
+    const [answerList2, setAnswerList2] = useState();
+    const [answerList3, setAnswerList3] = useState();
+    const [answerList4, setAnswerList4] = useState();
+    const [answerList5, setAnswerList5] = useState();
+    const [answerList6, setAnswerList6] = useState();
+    const [answerList7, setAnswerList7] = useState();
+    const [answerList8, setAnswerList8] = useState();
+    const [answerList9, setAnswerList9] = useState();
+    const [answerList10, setAnswerList10] = useState(); 
 
     useEffect(() => {
         const dbRef = ref(getDatabase());
@@ -144,10 +144,10 @@ export function FirebaseContextProvider({ children }) {
 /************************************************** MOBILE **********************************************/
 
 
-    const [mobilePadding1, setMobilePadding1] = useState('');
-    const [mobilePadding2, setMobilePadding2] = useState('');
-    const [mobilePadding3, setMobilePadding3] = useState('');
-    const [mobilePadding4, setMobilePadding4] = useState('');
+    const [mobilePadding1, setMobilePadding1] = useState('pb-0');
+    const [mobilePadding2, setMobilePadding2] = useState('pb-0');
+    const [mobilePadding3, setMobilePadding3] = useState('pb-0');
+    const [mobilePadding4, setMobilePadding4] = useState('pb-0');
 
 
     function changePaddingMobile(){

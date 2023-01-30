@@ -1,13 +1,6 @@
-import Image from 'next/image';
-import {useContext } from 'react';
-import { QuestionaireContext } from '../../contexts/questionaire';
 import WalkingPerson from './WalkingPerson';
 
-
-
 function Track(props) {
-
-    const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
     // console.log(questionaireState.trackPadding);
 

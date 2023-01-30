@@ -9,7 +9,7 @@ function StartPage(){
 
     return(
         <React.Fragment>
-            <div className="text-xl text-center mt-[6vw] flex flex-col items-center px-[4vw] xl:px-0">
+            <div className="text-xl text-center mt-[6vw] flex flex-col items-center pt-[4vw] px-[4vw] xl:px-0 xl:pt-0">
                 <h2 className="font-interBold darkcream-text darkcream-textshadow-lg pb-[5vw] text-6xl">Privilege Walk</h2>
                 <p className="font-montserratRegular text-[4vw] pt-[5vw] cream-text pb-[6vw] lg:px-[25vw] xl:text-lg xl:pt-0    ">
                     Welcome to <strong className="darkcream-text darkcream-textshadow">Discourse Agency's</strong> interactive Privilege Walk.

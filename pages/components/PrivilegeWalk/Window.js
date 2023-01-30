@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import WalkingWoman from '../../../public/images/walking-woman.png';
 import WalkingMan from '../../../public/images/walking-man.png';
+import AfricanWalkingMan from '../../../public/images/african-walking-man.PNG';
 
 import Track from './Track';
 import PlayerTrack from './PlayerTrack';
@@ -18,7 +19,7 @@ function Window(){
                 playerPadding={firebaseContext.padding1}
                 walkBool={firebaseContext.walk1} 
                 setWalkBool={firebaseContext.setWalk1} 
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
             <Track 
                 playerPadding={firebaseContext.padding2} 
@@ -30,13 +31,13 @@ function Window(){
                 playerPadding={firebaseContext.padding3} 
                 walkBool={firebaseContext.walk3}
                 setWalkBool={firebaseContext.setWalk3}  
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
             <Track 
                 playerPadding={firebaseContext.padding4} 
                 walkBool={firebaseContext.walk4}
                 setWalkBool={firebaseContext.setWalk4} 
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
             <Track 
                 playerPadding={firebaseContext.padding5}
@@ -48,7 +49,7 @@ function Window(){
                 playerPadding={firebaseContext.padding6} 
                 walkBool={firebaseContext.walk6} 
                 setWalkBool={firebaseContext.setWalk6} 
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
             <Track 
                 playerPadding={firebaseContext.padding7} 
@@ -66,7 +67,7 @@ function Window(){
                 playerPadding={firebaseContext.padding9} 
                 walkBool={firebaseContext.walk9}
                 setWalkBool={firebaseContext.setWalk9} 
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
             <Track 
                 playerPadding={firebaseContext.padding10} 
@@ -78,7 +79,7 @@ function Window(){
                 playerPadding={questionaireState.trackPadding}
                 walkBool={questionaireState.walk}
                 setWalkBool={firebaseContext.setWalk} 
-                playerImage={WalkingMan}
+                playerImage={AfricanWalkingMan}
             />
         </div>
     );

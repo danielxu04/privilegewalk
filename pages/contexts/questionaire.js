@@ -15,6 +15,8 @@ const initialState = {
     currentAnswer: '',
     // padding for track movement
     trackPadding: '',
+    // padding for mobile track movement
+    mobileTrackPadding: '',
     // array to store answer sequence
     answerSequence: [],
     // boolean for start
@@ -43,6 +45,8 @@ const reducer = (state, action) => {
             const currentQuestionIndex = isComplete ? state.currentQuestionIndex : state.currentQuestionIndex + 1;
             // compute trackPadding based on privilegeCount
             const trackPadding = "pl-" + (privilegeCount * 3).toString() + "vw";
+            // compute mobileTrackPadding based on privilegeCount
+            const mobileTrackPadding = "pb-" + (privilegeCount).toString();
             // change walk boolean depending on player answerSequence
             const walk = action.payload === "yes" ? true : false;
             
@@ -53,6 +57,7 @@ const reducer = (state, action) => {
                 currentQuestionIndex,
                 isComplete,
                 trackPadding,
+                mobileTrackPadding,
                 answerSequence,
                 walk
             }

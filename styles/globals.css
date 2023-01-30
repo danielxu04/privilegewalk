@@ -63,6 +63,7 @@ body{
   background: radial-gradient(circle, rgba(33,41,64,1) 0%, rgba(10,10,24,1) 55%);
 }
 
+/********************************************* DESKTOP MOVEMENT ********************************************/
 .pl-3vw{
   transition: 2s;
   padding-left: 3vw;
@@ -175,6 +176,125 @@ body{
   transition: 2s;
   padding-left: 84vw;
 }
+
+
+/********************************************* MOBILE MOVEMENT ********************************************/
+
+.pb-1{
+  transition: 1s;
+  padding-bottom: 2.3vh;
+}
+.pb-2{
+  transition: 1s;
+  padding-bottom: 4.6vh;
+}
+.pb-3{
+  transition: 1s;
+  padding-bottom: 6.9vh;
+}
+.pb-4{
+  transition: 1s;
+  padding-bottom: 9.2vh;
+}
+.pb-5{
+  transition: 1s;
+  padding-bottom: 11.5vh;
+}
+.pb-6{
+  transition: 1s;
+  padding-bottom: 13.8vh;
+}
+.pb-7{
+  transition: 1s;
+  padding-bottom: 16.1vh;
+}
+.pb-8{
+  transition: 1s;
+  padding-bottom: 18.4vh;
+}
+.pb-9{
+  transition: 1s;
+  padding-bottom: 20.7vh;
+}
+.pb-10{
+  transition: 1s;
+  padding-bottom: 23vh;
+}
+.pb-11{
+  transition: 1s;
+  padding-bottom: 25.3vh;
+}
+.pb-12{
+  transition: 1s;
+  padding-bottom: 27.6vh;
+}
+.pb-13{
+  transition: 1s;
+  padding-bottom: 29.9vh;
+}
+.pb-14{
+  transition: 1s;
+  padding-bottom: 32.2vh;
+}
+.pb-15{
+  transition: 1s;
+  padding-bottom: 34.5vh;
+}
+.pb-16{
+  transition: 1s;
+  padding-bottom: 36.8vh;
+}
+.pb-17{
+  transition: 1s;
+  padding-bottom: 39.1vh;
+}
+.pb-18{
+  transition: 1s;
+  padding-bottom: 41.4vh;
+}
+.pb-19{
+  transition: 1s;
+  padding-bottom: 43.7vh;
+}
+.pb-20{
+  transition: 1s;
+  padding-bottom: 46vh;
+}
+.pb-21{
+  transition: 1s;
+  padding-bottom: 48.3vh;
+}
+.pb-22{
+  transition: 1s;
+  padding-bottom: 50.6vh;
+}
+.pb-23{
+  transition: 1s;
+  padding-bottom: 52.9vh;
+}
+.pb-24{
+  transition: 1s;
+  padding-bottom: 55.2vh;
+}
+.pb-25{
+  transition: 1s;
+  padding-bottom: 57.5vh;
+}
+.pb-26{
+  transition: 1s;
+  padding-bottom: 59.8vh;
+}
+.pb-27{
+  transition: 1s;
+  padding-bottom: 62.1vh;
+}
+.pb-28{
+  transition: 1s;
+  padding-bottom: 64.4vh;
+}
+
+
+
 .darkblue-text{
   color: #0A2647;
 }
@@ -253,4 +373,11 @@ body{
   transform: scaleX(-1);
 }
 
-
+/********************************************** MOBILE TRACK ****************************************************/
+.mobile-player-track{
+  /*
+  background: #1d2436;  
+  background: linear-gradient(to left, #1f273bc1, #e3ddbfbb, #e7dfb65d);
+  */
+  background: #121315cf;
+}

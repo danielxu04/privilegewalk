@@ -11,8 +11,10 @@ const Answer = ({onAnswerText}) => {
             <div 
                 className="flex px-[6vw] cream-background justify-center hover:cursor-pointer hover:scale-105 mx-4 p-2 rounded-lg font-interMedium
                 darkblue-text answer-btn xl:w-[10vw] xl:px-0"
-                onClick={() => {onAnswerText("yes"); firebaseContext.setCurrentQuestionIndexv2(firebaseContext.currentQuestionIndexv2 + 1);
-                firebaseContext.changePadding();}}
+                onClick={() => {onAnswerText("yes"); 
+                                firebaseContext.setCurrentQuestionIndexv2(firebaseContext.currentQuestionIndexv2 + 1);
+                                firebaseContext.changePadding();
+                                firebaseContext.changePaddingMobile();}}
             >
                 Yes
             </div>
@@ -21,7 +23,8 @@ const Answer = ({onAnswerText}) => {
                 darkblue-text answer-btn xl:w-[10vw] xl:px-0"
                 onClick={() => {onAnswerText("no"); 
                                 firebaseContext.setCurrentQuestionIndexv2(firebaseContext.currentQuestionIndexv2 + 1);
-                                firebaseContext.changePadding();}}
+                                firebaseContext.changePadding();
+                                firebaseContext.changePaddingMobile();}}
             >
                 No
             </div>

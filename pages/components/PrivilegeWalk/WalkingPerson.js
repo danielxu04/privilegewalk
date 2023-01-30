@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import { FirebaseContext } from '../../contexts/database';
 import { QuestionaireContext } from '../../contexts/questionaire';
-import WalkingMan from '../../../public/images/walking-man.png'
 
 
 const WalkingPerson = (props) => {

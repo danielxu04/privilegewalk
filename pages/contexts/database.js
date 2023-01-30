@@ -160,11 +160,31 @@ export function FirebaseContextProvider({ children }) {
     const [walk10, setWalk10] = useState(false);
     
 
-    function handleClick() {
-        setTimeout(() => {
-          ;
-        }, 1000);
-      }
+
+
+/************************************************** MOBILE **********************************************/
+
+
+    const [mobilePadding1, setMobilePadding1] = useState('');
+    const [mobilePadding2, setMobilePadding2] = useState('');
+    const [mobilePadding3, setMobilePadding3] = useState('');
+    const [mobilePadding4, setMobilePadding4] = useState('');
+
+
+    function changePaddingMobile(){
+        setPrivilegeCount1(answerList1[currentQuestionIndexv2] === "yes" ? privilegeCount1 + 1 : privilegeCount1);
+        setMobilePadding1("pb-" + (privilegeCount1).toString());
+
+        setPrivilegeCount2(answerList2[currentQuestionIndexv2] === "yes" ? privilegeCount2 + 1 : privilegeCount2);
+        setMobilePadding2("pb-" + (privilegeCount2).toString());
+
+        setPrivilegeCount3(answerList3[currentQuestionIndexv2] === "yes" ? privilegeCount3 + 1 : privilegeCount3);
+        setMobilePadding3("pb-" + (privilegeCount3).toString());
+
+        setPrivilegeCount4(answerList4[currentQuestionIndexv2] === "yes" ? privilegeCount4 + 1 : privilegeCount4);
+        setMobilePadding4("pb-" + (privilegeCount4).toString());
+    }
+    
     
 
     return <FirebaseContext.Provider 
@@ -172,7 +192,8 @@ export function FirebaseContextProvider({ children }) {
                     answerList3, answerList4, answerList5, answerList6, answerList7, answerList8, answerList9, answerList10,
                 setCurrentQuestionIndexv2, currentQuestionIndexv2, padding1, padding2, padding3, padding4, padding5, padding6, padding7,
                 padding8, padding9, padding10, changePadding, restartApp, walk, setWalk, walk1, walk2, walk3, walk4, walk5, walk6, walk7,
-                walk8, walk9, walk10, setWalk1, setWalk2, setWalk3, setWalk4, setWalk5, setWalk6, setWalk7, setWalk8, setWalk9, setWalk10}}
+                walk8, walk9, walk10, setWalk1, setWalk2, setWalk3, setWalk4, setWalk5, setWalk6, setWalk7, setWalk8, setWalk9, setWalk10,
+                mobilePadding1, mobilePadding2, mobilePadding3, mobilePadding4, changePaddingMobile}}
             >
             {children}
             </FirebaseContext.Provider>

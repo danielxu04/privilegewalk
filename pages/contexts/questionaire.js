@@ -14,9 +14,9 @@ const initialState = {
     // current answer
     currentAnswer: '',
     // padding for track movement
-    trackPadding: '',
+    trackPadding: 'pl-[0vw]',
     // padding for mobile track movement
-    mobileTrackPadding: '',
+    mobileTrackPadding: 'pb-0',
     // array to store answer sequence
     answerSequence: [],
     // boolean for start

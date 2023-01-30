@@ -61,16 +61,16 @@ export function FirebaseContextProvider({ children }) {
     const[privilegeCount9, setPrivilegeCount9] = useState(0);
     const[privilegeCount10, setPrivilegeCount10] = useState(0);
 
-    const[padding1, setPadding1] = useState('');
-    const[padding2, setPadding2] = useState('');
-    const[padding3, setPadding3] = useState('');
-    const[padding4, setPadding4] = useState('');
-    const[padding5, setPadding5] = useState('');
-    const[padding6, setPadding6] = useState('');
-    const[padding7, setPadding7] = useState('');
-    const[padding8, setPadding8] = useState('');
-    const[padding9, setPadding9] = useState('');
-    const[padding10, setPadding10] = useState('');
+    const[padding1, setPadding1] = useState('pl-[0vw]');
+    const[padding2, setPadding2] = useState('pl-[0vw]');
+    const[padding3, setPadding3] = useState('pl-[0vw]');
+    const[padding4, setPadding4] = useState('pl-[0vw]');
+    const[padding5, setPadding5] = useState('pl-[0vw]');
+    const[padding6, setPadding6] = useState('pl-[0vw]');
+    const[padding7, setPadding7] = useState('pl-[0vw]');
+    const[padding8, setPadding8] = useState('pl-[0vw]');
+    const[padding9, setPadding9] = useState('pl-[0vw]');
+    const[padding10, setPadding10] = useState('pl-[0vw]');
 
     const[currentQuestionIndexv2, setCurrentQuestionIndexv2] = useState(0);
 
@@ -116,29 +116,6 @@ export function FirebaseContextProvider({ children }) {
         setPadding10("pl-" + (privilegeCount10 * 3).toString() + "vw");
         setWalk10(answerList10[currentQuestionIndexv2 - 1] === "yes" ? true : false);
         }
-    
-    function restartApp(){
-        setPrivilegeCount1(0);
-        setPrivilegeCount2(0);
-        setPrivilegeCount3(0);
-        setPrivilegeCount4(0);
-        setPrivilegeCount5(0);
-        setPrivilegeCount6(0);
-        setPrivilegeCount7(0);
-        setPrivilegeCount8(0);
-        setPrivilegeCount9(0);
-        setPrivilegeCount10(0);
-        setPadding1('');
-        setPadding2('');
-        setPadding3('');
-        setPadding4('');
-        setPadding5('');
-        setPadding6('');
-        setPadding7('');
-        setPadding8('');
-        setPadding9('');
-        setPadding10('');
-    }
 
     function writeUserData() {
         console.log("writing...");
@@ -193,7 +170,7 @@ export function FirebaseContextProvider({ children }) {
                 value={{answerMatrix, setAnswerMatrix, writeUserData, answerList1, answerList2, 
                     answerList3, answerList4, answerList5, answerList6, answerList7, answerList8, answerList9, answerList10,
                 setCurrentQuestionIndexv2, currentQuestionIndexv2, padding1, padding2, padding3, padding4, padding5, padding6, padding7,
-                padding8, padding9, padding10, changePadding, restartApp, walk, setWalk, walk1, walk2, walk3, walk4, walk5, walk6, walk7,
+                padding8, padding9, padding10, changePadding, walk, setWalk, walk1, walk2, walk3, walk4, walk5, walk6, walk7,
                 walk8, walk9, walk10, setWalk1, setWalk2, setWalk3, setWalk4, setWalk5, setWalk6, setWalk7, setWalk8, setWalk9, setWalk10,
                 mobilePadding1, mobilePadding2, mobilePadding3, mobilePadding4, changePaddingMobile}}
             >

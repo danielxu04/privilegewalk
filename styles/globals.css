@@ -64,6 +64,10 @@ body{
 }
 
 /********************************************* DESKTOP MOVEMENT ********************************************/
+.pl-0vw{
+  transition: 2s;
+  padding-left: 0vw;
+}
 .pl-3vw{
   transition: 2s;
   padding-left: 3vw;
@@ -179,7 +183,10 @@ body{
 
 
 /********************************************* MOBILE MOVEMENT ********************************************/
-
+.pb-0{
+  transition: 1s;
+  padding-bottom: 0;
+}
 .pb-1{
   transition: 1s;
   padding-bottom: 2.3vh;

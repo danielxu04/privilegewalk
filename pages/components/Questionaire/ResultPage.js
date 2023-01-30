@@ -1,12 +1,9 @@
 import {useContext} from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
-import { FirebaseContext } from '../../contexts/database';
-import Wrapper from '../../helpers/Wrapper';
 
 function ResultPage(){
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
-    const firebaseContext = useContext(FirebaseContext);
 
     return (
         <div className="flex flex-col mt-[40vw] xl:mt-0">
@@ -25,7 +22,7 @@ function ResultPage(){
                 onClick={() => {dispatch({ type: 'restart' }); firebaseContext.restartApp();}}
             >
                 Restart
-    </div>*/}
+            </div>*/}
         </div>
         
     );

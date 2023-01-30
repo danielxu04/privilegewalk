@@ -1,7 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
-import { ref, onValue, getDatabase, child, get, set } from 'firebase/database';
+import { ref, getDatabase, child, get, set } from 'firebase/database';
 import { database } from '../../firebase/firebase';
 
+
+function db(){
+    return console.log("import database context");
+}
 
 export const FirebaseContext = createContext();
 
@@ -72,7 +76,7 @@ export function FirebaseContextProvider({ children }) {
 
     const[currentQuestionIndexv2, setCurrentQuestionIndexv2] = useState(0);
 
-
+    
     function changePadding(){
         setPrivilegeCount1(answerList1[currentQuestionIndexv2] === "yes" ? privilegeCount1 + 1 : privilegeCount1);
         setWalk1(answerList1[currentQuestionIndexv2 - 1] === "yes" ? true : false);
@@ -198,4 +202,6 @@ export function FirebaseContextProvider({ children }) {
             {children}
             </FirebaseContext.Provider>
 }
+
+export default db;
 

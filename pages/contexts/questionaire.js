@@ -87,6 +87,10 @@ const reducer = (state, action) => {
     }
 };
 
+function q(){
+    return console.log("importing questionaire context");
+}
+
 export const QuestionaireContext = createContext();
 
 // children is our application. we are wrapping context around our entire app
@@ -94,3 +98,5 @@ export const QuestionaireProvider = ({ children }) => {
     const value = useReducer(reducer, initialState);
     return <QuestionaireContext.Provider value={value}>{children}</QuestionaireContext.Provider>;
 };
+
+export default q;

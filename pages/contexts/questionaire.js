@@ -12,7 +12,7 @@ const initialState = {
     // privilege counter
     privilegeCount: 0,
     // padding for track movement
-    trackPadding: 'pl-[0vw]',
+    trackPadding: 'pl-0vw',
     // padding for mobile track movement
     mobileTrackPadding: 'pb-0',
     // array to store answer sequence

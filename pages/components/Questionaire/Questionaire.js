@@ -1,7 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { QuestionaireContext } from '../../../contexts/questionaire';
 import { FirebaseContext } from '../../../contexts/database';
-import Wrapper from '../../helpers/Wrapper';
 import Question from './Question';
 import ResultPage from './ResultPage';
 import Answer from './Answer';
@@ -36,7 +35,7 @@ const Questionaire = () => {
     
 
     return (
-        <Wrapper>
+        <div>
             {questionaireState.startClicked && (
                 <StartPage/>
             )}
@@ -44,7 +43,7 @@ const Questionaire = () => {
                 <ResultPage />
             )}
             {!questionaireState.isComplete && !questionaireState.startClicked && (
-                <Wrapper>
+                <div>
                     <MobileWindow />
                     <Window />
                     <div className="items-center flex flex-col">
@@ -54,9 +53,9 @@ const Questionaire = () => {
                         <Question />
                         <Answer onAnswerText={(answerText) => dispatch({type: "select_answer", payload: answerText})}/>
                     </div>
-                </Wrapper>
+                </div>
             )}
-        </Wrapper>
+        </div>
     );
 }
 

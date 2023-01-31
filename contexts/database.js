@@ -19,7 +19,7 @@ export function FirebaseContextProvider({ children }) {
     const [answerList7, setAnswerList7] = useState(["yes"]);
     const [answerList8, setAnswerList8] = useState(["yes"]);
     const [answerList9, setAnswerList9] = useState(["yes"]);
-    const [answerList10, setAnswerList10] = useState(["yes"]); 
+    const [answerList10, setAnswerList10] = useState(["yes"]);
 
     useEffect(() => {
         const dbRef = ref(getDatabase());
@@ -73,7 +73,7 @@ export function FirebaseContextProvider({ children }) {
 
     const[currentQuestionIndexv2, setCurrentQuestionIndexv2] = useState(0);
 
-    
+
     function changePadding(){
         setPrivilegeCount1(answerList1[currentQuestionIndexv2] === "yes" ? privilegeCount1 + 1 : privilegeCount1);
         setWalk1(answerList1[currentQuestionIndexv2 - 1] === "yes" ? true : false);

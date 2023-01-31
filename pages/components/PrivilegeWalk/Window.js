@@ -73,13 +73,12 @@ function Window(){
                 setWalkBool={firebaseContext.setWalk10} 
                 playerImage={WalkingMan}
             />
-            {/*
             <PlayerTrack 
                 playerPadding={questionaireState.trackPadding}
                 walkBool={questionaireState.walk}
                 setWalkBool={firebaseContext.setWalk} 
                 playerImage={WalkingMan}
-    /> */}
+            />
         </div>
     );
 }

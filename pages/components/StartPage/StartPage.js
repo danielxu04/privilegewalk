@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import StartButton2 from './StartButton2';
+import StartButton from './StartButton';
 
 function StartPage(){
 
     return(
-        <React.Fragment>
             <div className="text-xl text-center mt-[6vw] flex flex-col items-center pt-[4vw] px-[4vw] xl:px-0 xl:pt-0">
                 <h2 className="font-interBold darkcream-text darkcream-textshadow-lg pb-[5vw] text-6xl">Privilege Walk</h2>
                 <p className="font-montserratRegular text-[4vw] pt-[5vw] cream-text pb-[6vw] lg:px-[25vw] xl:text-lg xl:pt-0    ">
@@ -18,9 +16,8 @@ function StartPage(){
                     In the following questionaire, you will answer a sequence of questions, which will aim to measure your privilege compared to 
                     <strong className="darkcream-text darkcream-textshadow">  10 other users</strong>, in a virtual privilege walk simulation. Let&apos;s go!
                 </p>
-                <StartButton2 />
+                <StartButton />
             </div>
-        </React.Fragment>
     );
 }
 

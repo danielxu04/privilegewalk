@@ -1,46 +1,19 @@
-import React, { useRef } from 'react';
-import anime from 'animejs';
+import React, { useContext } from 'react';
+import { QuestionaireContext } from '../../contexts/questionaire';
 
-function StartButton() {
-  const buttonRef = useRef(null);
-  const pulseRef = useRef(null);
-  const labelRef = useRef(null);
+function StartButton(){
 
-  const handleClick = () => {
-    anime({
-      targets: buttonRef.current,
-      scale: [1, 1.4],
-      duration: 800,
-      elasticity: 400,
-    });
-    anime({
-      targets: pulseRef.current,
-      opacity: [0, 1],
-      scale: [0, 1],
-      duration: 800,
-      easing: 'easeInOutQuad',
-    });
-    anime({
-      targets: labelRef.current,
-      translateX: [0, -30],
-      opacity: [1, 0],
-      duration: 800,
-      easing: 'easeInOutQuad',
-    });
-  };
+    const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
-  return (
-    <div className="px-3 py-2 font-interMedium text-lg transition-050s justify-center rounded-lg cream-background start-btn w-[8vw]">
-      <div className="pulse" ref={pulseRef} />
-      <button
-        ref={buttonRef}
-        className="start-button"
-        onClick={handleClick}
-      >
-        <span ref={labelRef} className="start-label">Start</span>
-      </button>
-    </div>
-  );
+    return(
+            <div 
+                className="flex hover:cursor-pointer hover:scale-105 font-interMedium text-lg transition-050s justify-center rounded-lg 
+                cream-background start-btn mt-[5vw] px-6 py-2 xl:w-[8vw] xl:px-3 xl:mt-0" 
+
+                onClick={() => dispatch({ type: 'start' })}>
+                    Start
+            </div>
+    );
 }
 
 export default StartButton;

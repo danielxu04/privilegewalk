@@ -11,8 +11,6 @@ const initialState = {
     isComplete: false,
     // privilege counter
     privilegeCount: 0,
-    // current answer
-    currentAnswer: '',
     // padding for track movement
     trackPadding: 'pl-[0vw]',
     // padding for mobile track movement
@@ -52,7 +50,6 @@ const reducer = (state, action) => {
             
             return{
                 ...state,
-                currentAnswer: action.payload,
                 privilegeCount,
                 currentQuestionIndex,
                 isComplete,
@@ -69,7 +66,7 @@ const reducer = (state, action) => {
         case "reset_walk": {
             const walk = false;
             return {
-                ... state,
+                ...state,
                 walk
             }
         }
@@ -77,7 +74,7 @@ const reducer = (state, action) => {
             const startClicked = false;
 
             return {
-                ... state,
+                ...state,
                 startClicked
             }
         }
@@ -85,6 +82,8 @@ const reducer = (state, action) => {
             return state;
         }
     }
+
+    return state;
 };
 
 export const QuestionaireContext = createContext();

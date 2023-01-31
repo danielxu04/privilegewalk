@@ -8,14 +8,14 @@
   const WalkingPerson = (props) => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
-    // const personRef = useRef(null);
+    const personRef = useRef(null);
 
     function handleClick() {
         props.setWalkBool(false);
         dispatch({ type: 'reset_walk' });
     }
     console.log(props.walkBool);
-{/*
+
     useEffect(() => {
       if(props.walkBool){
         
@@ -29,11 +29,10 @@
         handleClick();
       }
     }, [props.walkBool]);
-  */}
+
     return (
       <div className="person-container">
-        <div className="person">
-          {/*ref={personRef}*/}
+        <div ref={personRef} className="person">
           <Image className="invert-img w-[2.2vw]" src={props.image} width=""/>
         </div>
       </div>

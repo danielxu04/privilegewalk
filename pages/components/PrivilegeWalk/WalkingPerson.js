@@ -2,7 +2,7 @@
   import anime from 'animejs';
   import Image from 'next/image'
 
-  import { QuestionaireContext } from '../../contexts/questionaire';
+  import { QuestionaireContext } from '../../../contexts/questionaire';
 
 
   const WalkingPerson = (props) => {

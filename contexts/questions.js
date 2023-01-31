@@ -224,6 +224,3 @@ export const questions = [
         z: 'z-3'
     }
 ]
-
-
-export default () => null;

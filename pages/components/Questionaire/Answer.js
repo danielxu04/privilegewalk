@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import { FirebaseContext } from '../../contexts/database';
+import { FirebaseContext } from '../../../contexts/database';
 
 
 const Answer = ({onAnswerText}) => {

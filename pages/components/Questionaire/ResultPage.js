@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import { QuestionaireContext } from '../../contexts/questionaire';
+import { QuestionaireContext } from '../../../contexts/questionaire';
 
 function ResultPage(){
 

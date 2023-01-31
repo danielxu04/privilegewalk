@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
-import { QuestionaireContext } from '../../contexts/questionaire';
-import { FirebaseContext } from '../../contexts/database';
+import { QuestionaireContext } from '../../../contexts/questionaire';
+import { FirebaseContext } from '../../../contexts/database';
 import Wrapper from '../../helpers/Wrapper';
 import Question from './Question';
 import ResultPage from './ResultPage';

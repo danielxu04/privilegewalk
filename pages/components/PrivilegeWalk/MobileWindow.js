@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import MobileTrack from "./MobileTrack";
 import MobilePlayerTrack from './MobilePlayerTrack';
-import { FirebaseContext } from '../../contexts/database';
-import { QuestionaireContext } from '../../contexts/questionaire';
+import { FirebaseContext } from '../../../contexts/database';
+import { QuestionaireContext } from '../../../contexts/questionaire';
 
 function MobileWindow() {
 

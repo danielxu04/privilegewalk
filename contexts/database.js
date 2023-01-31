@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { ref, getDatabase, child, get, set } from 'firebase/database';
-import { database } from '../../firebase/firebase';
+import { database } from '../firebase/firebase';
 
 
 
@@ -176,6 +176,4 @@ export function FirebaseContextProvider({ children }) {
             {children}
             </FirebaseContext.Provider>
 }
-
-export default () => null;
 

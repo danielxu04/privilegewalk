@@ -3,8 +3,8 @@ import WalkingMan from '../../../public/images/walking-man.png';
 
 import Track from './Track';
 import PlayerTrack from './PlayerTrack';
-import { QuestionaireContext } from '../../contexts/questionaire';
-import { FirebaseContext } from '../../contexts/database';
+import { QuestionaireContext } from '../../../contexts/questionaire';
+import { FirebaseContext } from '../../../contexts/database';
 
 function Window(){
 

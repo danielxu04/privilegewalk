@@ -8,7 +8,10 @@ function MobileWindow() {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
     const firebaseContext = useContext(FirebaseContext);
-
+    
+    if(!questionaireState){
+        return <div>Loading...</div>
+    }
     return (
         <div className="flex lg:hidden h-[65vh] px-6 my-8">
             <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding1}/>

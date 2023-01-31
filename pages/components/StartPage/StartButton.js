@@ -3,11 +3,7 @@ import { QuestionaireContext } from '../../../contexts/questionaire';
 
 function StartButton(){
 
-    const [questionaireState, dispatch] = useContext(QuestionaireContext) || {};
-
-    if(!questionaireState){
-        return null;
-    }
+    const [questionaireState, dispatch] = useContext(QuestionaireContext);
 
     return(
             <div 

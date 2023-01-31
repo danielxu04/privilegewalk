@@ -6,15 +6,9 @@ import { QuestionaireContext } from '../../../contexts/questionaire';
 
 function MobileWindow() {
 
-    const [questionaireState, dispatch] = useContext(QuestionaireContext) || {};
-    const firebaseContext = useContext(FirebaseContext) || {};
+    const [questionaireState, dispatch] = useContext(QuestionaireContext);
+    const firebaseContext = useContext(FirebaseContext);
     
-    if(!questionaireState){
-        return null;
-    }
-    else if(!firebaseContext){
-        return null;
-    }
     return (
         <div className="flex lg:hidden h-[65vh] px-6 my-8">
             <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding1}/>

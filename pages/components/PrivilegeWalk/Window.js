@@ -8,15 +8,8 @@ import { FirebaseContext } from '../../../contexts/database';
 
 function Window(){
 
-    const [questionaireState, dispatch] = useContext(QuestionaireContext) || {};
-    const firebaseContext = useContext(FirebaseContext) || {};
-
-    if(!questionaireState){
-        return null;
-    }
-    else if(!firebaseContext){
-        return null;
-    }
+    const [questionaireState, dispatch] = useContext(QuestionaireContext);
+    const firebaseContext = useContext(FirebaseContext);
 
     return (
         <div className="hidden lg:flex flex-col mx-[5vw] mt-[3vw] mb-[2vw] border-2 track rounded-md darkcream-border cream-boxshadow-lg">
@@ -80,12 +73,13 @@ function Window(){
                 setWalkBool={firebaseContext.setWalk10} 
                 playerImage={WalkingMan}
             />
+            {/*
             <PlayerTrack 
                 playerPadding={questionaireState.trackPadding}
                 walkBool={questionaireState.walk}
                 setWalkBool={firebaseContext.setWalk} 
                 playerImage={WalkingMan}
-            />
+    /> */}
         </div>
     );
 }

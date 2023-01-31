@@ -17,12 +17,6 @@ function ResultPage(){
                 Thank you for participating in our virtual privilege walk! <br />
                 Your response has been recorded and will be used in future virtual privilege walks. 
             </div>
-            {/*<div 
-                className="w-[10vw] bg-white mt-10 text-center hover:cursor-pointer hover:scale-110"
-                onClick={() => {dispatch({ type: 'restart' }); firebaseContext.restartApp();}}
-            >
-                Restart
-            </div>*/}
         </div>
         
     );

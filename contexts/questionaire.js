@@ -25,8 +25,6 @@ const initialState = {
 
 
 const reducer = (state, action) => {
-    //console.log('reducer', state, action);
-
     // in reducer, create new objects, do not mutate old objects
     switch (action.type){
         case "select_answer": {
@@ -46,7 +44,7 @@ const reducer = (state, action) => {
             // compute mobileTrackPadding based on privilegeCount
             const mobileTrackPadding = "pb-" + (privilegeCount).toString();
             // change walk boolean depending on player answerSequence
-            const walk = action.payload === "yes" ? true : false;
+            const walk = action.payload === "yes";
             
             return{
                 ...state,

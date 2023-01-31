@@ -12,8 +12,6 @@ import StartPage from '../StartPage/StartPage';
 const Questionaire = () => {
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
-    // console.log('questionaireState', questionaireState)
-    // console.log(questionaireState.answerSequence);
     const firebaseContext = useContext(FirebaseContext);
     
     useEffect(() => {

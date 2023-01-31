@@ -3,7 +3,11 @@ import { QuestionaireContext } from '../../../contexts/questionaire';
 
 const Question = () => {
 
-    const [questionaireState, dispatch] = useContext(QuestionaireContext);
+    const [questionaireState, dispatch] = useContext(QuestionaireContext) || {};
+
+    if(!questionaireState){
+        return null;
+    }
 
     const currentQuestion = questionaireState.questions[questionaireState.currentQuestionIndex];
 

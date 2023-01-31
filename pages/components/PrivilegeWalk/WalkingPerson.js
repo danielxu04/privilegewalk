@@ -7,8 +7,12 @@
 
   const WalkingPerson = (props) => {
 
-    const [questionaireState, dispatch] = useContext(QuestionaireContext);
+    const [questionaireState, dispatch] = useContext(QuestionaireContext) || {};
     const personRef = useRef(null);
+
+    if(!questionaireState){
+      return null;
+    }
 
     function handleClick() {
         props.setWalkBool(false);

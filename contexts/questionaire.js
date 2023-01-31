@@ -19,6 +19,8 @@ const initialState = {
     answerSequence: ["yes"],
     // boolean for start
     startClicked: true,
+    // player walk boolean
+    walk: false,
 };
 
 
@@ -43,6 +45,8 @@ const reducer = (state, action) => {
             const trackPadding = "pl-" + (privilegeCount * 3).toString() + "vw";
             // compute mobileTrackPadding based on privilegeCount
             const mobileTrackPadding = "pb-" + (privilegeCount).toString();
+            // change walk boolean depending on player answerSequence
+            const walk = action.payload === "yes" ? true : false;
             
             return{
                 ...state,
@@ -68,6 +72,7 @@ const reducer = (state, action) => {
         }
         case "start": {
             const startClicked = false;
+
             return {
                 ...state,
                 startClicked

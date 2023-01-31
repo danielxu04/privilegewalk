@@ -18,7 +18,7 @@ const initialState = {
     // padding for mobile track movement
     mobileTrackPadding: 'pb-0',
     // array to store answer sequence
-    answerSequence: [],
+    answerSequence: ["yes"],
     // boolean for start
     startClicked: true,
     // player walk boolean

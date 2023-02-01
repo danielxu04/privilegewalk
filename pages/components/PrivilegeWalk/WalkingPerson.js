@@ -6,7 +6,6 @@
 
 
   const WalkingPerson = (props) => {
-
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
     const personRef = useRef(null);
 

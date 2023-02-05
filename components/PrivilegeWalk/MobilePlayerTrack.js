@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import WalkingMan from '../../../public/images/walking-man.png'
+import WalkingMan from '../../public/images/walking-man.png';
 
 function MobileTrack(props) {
     return (

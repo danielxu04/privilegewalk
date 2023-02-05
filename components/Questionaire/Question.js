@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { QuestionaireContext } from '../../../contexts/questionaire';
+import { QuestionaireContext } from '../../contexts/questionaire';
 
 const Question = () => {
 

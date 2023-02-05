@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
-import { QuestionaireContext } from '../../../contexts/questionaire';
-import { FirebaseContext } from '../../../contexts/database';
+import { QuestionaireContext } from '../../contexts/questionaire';
+import { FirebaseContext } from '../../contexts/database';
 import Question from './Question';
 import ResultPage from './ResultPage';
 import Answer from './Answer';
@@ -37,13 +37,13 @@ const Questionaire = () => {
 
     return (
         <div>
-            {/*questionaireState.startClicked && (
+            {questionaireState.startClicked && (
                 <StartPage/>
-            ) */}
-            {/*questionaireState.isComplete && (
+            )}
+            {questionaireState.isComplete && (
                 <ResultPage />
-            )*/}
-            {/*!questionaireState.isComplete && !questionaireState.startClicked && */(
+            )}
+            {!questionaireState.isComplete && !questionaireState.startClicked && (
                 <div>
                     <MobileWindow />
                     <Window />

@@ -8,7 +8,7 @@ export const FirebaseContext = createContext();
 
 export function FirebaseContextProvider({ children }) {
 
-    const [answerMatrix, setAnswerMatrix] = useState(["yes"]);
+    const [answerMatrix, setAnswerMatrix] = useState([]);
 
     const [answerList1, setAnswerList1] = useState([]);
     const [answerList2, setAnswerList2] = useState([]);

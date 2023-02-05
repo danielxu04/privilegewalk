@@ -27,23 +27,23 @@ const Questionaire = () => {
             firebaseContext.writeUserData();
         }
     }, [questionaireState.isComplete]);
-/*
+
     useEffect(() => {
         if (questionaireState.isComplete) {
             firebaseContext.writeUserData();
         }
     }, [questionaireState.isComplete, firebaseContext.answerMatrix]);
-*/
+
 
     return (
         <div>
-            {questionaireState.startClicked && (
+            {/*questionaireState.startClicked && (
                 <StartPage/>
-            )}
-            {questionaireState.isComplete && (
+            ) */}
+            {/*questionaireState.isComplete && (
                 <ResultPage />
-            )}
-            {!questionaireState.isComplete && !questionaireState.startClicked && (
+            )*/}
+            {/*!questionaireState.isComplete && !questionaireState.startClicked && */(
                 <div>
                     <MobileWindow />
                     <Window />

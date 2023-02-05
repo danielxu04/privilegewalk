@@ -15,6 +15,7 @@ const Questionaire = () => {
     
     useEffect(() => {
         if(questionaireState.isComplete){
+            console.log(firebaseContext.answerMatrix);
             firebaseContext.setAnswerMatrix(
                 [
                     ...firebaseContext.answerMatrix,
@@ -26,13 +27,13 @@ const Questionaire = () => {
             firebaseContext.writeUserData();
         }
     }, [questionaireState.isComplete]);
-
+/*
     useEffect(() => {
         if (questionaireState.isComplete) {
             firebaseContext.writeUserData();
         }
     }, [questionaireState.isComplete, firebaseContext.answerMatrix]);
-    
+*/
 
     return (
         <div>

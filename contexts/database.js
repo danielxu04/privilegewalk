@@ -8,7 +8,7 @@ export const FirebaseContext = createContext();
 
 export function FirebaseContextProvider({ children }) {
 
-    const [answerMatrix, setAnswerMatrix] = useState([]);
+    const [answerMatrix, setAnswerMatrix] = useState(["yes"]);
 
     const [answerList1, setAnswerList1] = useState([]);
     const [answerList2, setAnswerList2] = useState([]);
@@ -91,43 +91,43 @@ export function FirebaseContextProvider({ children }) {
     function changePadding(){
         setPrivilegeCount1(answerList1[currentQuestionIndexv2] === "yes" ? privilegeCount1 + 1 : privilegeCount1);
         setPadding1("pl-" + (privilegeCount1 * 3).toString() + "vw");
-        setWalk1(answerList1[currentQuestionIndexv2] === "yes");
+        setWalk1(answerList1[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount2(answerList2[currentQuestionIndexv2] === "yes" ? privilegeCount2 + 1 : privilegeCount2);
         setPadding2("pl-" + (privilegeCount2 * 3).toString() + "vw");
-        setWalk2(answerList2[currentQuestionIndexv2] === "yes");
+        setWalk2(answerList2[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount3(answerList3[currentQuestionIndexv2] === "yes" ? privilegeCount3 + 1 : privilegeCount3);
         setPadding3("pl-" + (privilegeCount3 * 3).toString() + "vw"); 
-        setWalk3(answerList3[currentQuestionIndexv2] === "yes");
+        setWalk3(answerList3[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount4(answerList4[currentQuestionIndexv2] === "yes" ? privilegeCount4 + 1 : privilegeCount4);
         setPadding4("pl-" + (privilegeCount4 * 3).toString() + "vw"); 
-        setWalk4(answerList4[currentQuestionIndexv2] === "yes");
+        setWalk4(answerList4[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount5(answerList5[currentQuestionIndexv2] === "yes" ? privilegeCount5 + 1 : privilegeCount5);
         setPadding5("pl-" + (privilegeCount5 * 3).toString() + "vw");
-        setWalk5(answerList5[currentQuestionIndexv2] === "yes");
+        setWalk5(answerList5[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount6(answerList6[currentQuestionIndexv2] === "yes" ? privilegeCount6 + 1 : privilegeCount6);
         setPadding6("pl-" + (privilegeCount6 * 3).toString() + "vw");
-        setWalk6(answerList6[currentQuestionIndexv2] === "yes");
+        setWalk6(answerList6[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount7(answerList7[currentQuestionIndexv2] === "yes" ? privilegeCount7 + 1 : privilegeCount7);
         setPadding7("pl-" + (privilegeCount7 * 3).toString() + "vw");
-        setWalk7(answerList7[currentQuestionIndexv2] === "yes");
+        setWalk7(answerList7[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount8(answerList8[currentQuestionIndexv2] === "yes" ? privilegeCount8 + 1 : privilegeCount8);
         setPadding8("pl-" + (privilegeCount8 * 3).toString() + "vw"); 
-        setWalk8(answerList8[currentQuestionIndexv2 ] === "yes");
+        setWalk8(answerList8[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount9(answerList9[currentQuestionIndexv2] === "yes" ? privilegeCount9 + 1 : privilegeCount9);
         setPadding9("pl-" + (privilegeCount9 * 3).toString() + "vw"); 
-        setWalk9(answerList9[currentQuestionIndexv2 ] === "yes");
+        setWalk9(answerList9[currentQuestionIndexv2 - 1] === "yes");
 
         setPrivilegeCount10(answerList10[currentQuestionIndexv2] === "yes" ? privilegeCount10 + 1 : privilegeCount10);
         setPadding10("pl-" + (privilegeCount10 * 3).toString() + "vw");
-        setWalk10(answerList10[currentQuestionIndexv2 ] === "yes");
+        setWalk10(answerList10[currentQuestionIndexv2 - 1] === "yes");
     }
 
         

@@ -2,8 +2,6 @@ import { createContext, useEffect, useState } from 'react';
 import { ref, getDatabase, child, get, set } from 'firebase/database';
 import { database } from '../firebase/firebase';
 
-
-
 export const FirebaseContext = createContext();
 
 export function FirebaseContextProvider({ children }) {
@@ -57,22 +55,12 @@ export function FirebaseContextProvider({ children }) {
     const[privilegeCount3, setPrivilegeCount3] = useState(0);
     const[privilegeCount4, setPrivilegeCount4] = useState(0);
     const[privilegeCount5, setPrivilegeCount5] = useState(0);
-    const[privilegeCount6, setPrivilegeCount6] = useState(0);
-    const[privilegeCount7, setPrivilegeCount7] = useState(0);
-    const[privilegeCount8, setPrivilegeCount8] = useState(0);
-    const[privilegeCount9, setPrivilegeCount9] = useState(0);
-    const[privilegeCount10, setPrivilegeCount10] = useState(0);
 
     const[padding1, setPadding1] = useState('pl-0vw');
     const[padding2, setPadding2] = useState('pl-0vw');
     const[padding3, setPadding3] = useState('pl-0vw');
     const[padding4, setPadding4] = useState('pl-0vw');
     const[padding5, setPadding5] = useState('pl-0vw');
-    const[padding6, setPadding6] = useState('pl-0vw');
-    const[padding7, setPadding7] = useState('pl-0vw');
-    const[padding8, setPadding8] = useState('pl-0vw');
-    const[padding9, setPadding9] = useState('pl-0vw');
-    const[padding10, setPadding10] = useState('pl-0vw');
 
     const [walk, setWalk] = useState(false);
     const [walk1, setWalk1] = useState(false);
@@ -80,11 +68,6 @@ export function FirebaseContextProvider({ children }) {
     const [walk3, setWalk3] = useState(false);
     const [walk4, setWalk4] = useState(false);
     const [walk5, setWalk5] = useState(false);
-    const [walk6, setWalk6] = useState(false);
-    const [walk7, setWalk7] = useState(false);
-    const [walk8, setWalk8] = useState(false);
-    const [walk9, setWalk9] = useState(false);
-    const [walk10, setWalk10] = useState(false);
 
 
 
@@ -108,26 +91,6 @@ export function FirebaseContextProvider({ children }) {
         setPrivilegeCount5(answerList5[currentQuestionIndexv2] === "yes" ? privilegeCount5 + 1 : privilegeCount5);
         setPadding5("pl-" + (privilegeCount5 * 3).toString() + "vw");
         setWalk5(answerList5[currentQuestionIndexv2 - 1] === "yes");
-
-        setPrivilegeCount6(answerList6[currentQuestionIndexv2] === "yes" ? privilegeCount6 + 1 : privilegeCount6);
-        setPadding6("pl-" + (privilegeCount6 * 3).toString() + "vw");
-        setWalk6(answerList6[currentQuestionIndexv2 - 1] === "yes");
-
-        setPrivilegeCount7(answerList7[currentQuestionIndexv2] === "yes" ? privilegeCount7 + 1 : privilegeCount7);
-        setPadding7("pl-" + (privilegeCount7 * 3).toString() + "vw");
-        setWalk7(answerList7[currentQuestionIndexv2 - 1] === "yes");
-
-        setPrivilegeCount8(answerList8[currentQuestionIndexv2] === "yes" ? privilegeCount8 + 1 : privilegeCount8);
-        setPadding8("pl-" + (privilegeCount8 * 3).toString() + "vw"); 
-        setWalk8(answerList8[currentQuestionIndexv2 - 1] === "yes");
-
-        setPrivilegeCount9(answerList9[currentQuestionIndexv2] === "yes" ? privilegeCount9 + 1 : privilegeCount9);
-        setPadding9("pl-" + (privilegeCount9 * 3).toString() + "vw"); 
-        setWalk9(answerList9[currentQuestionIndexv2 - 1] === "yes");
-
-        setPrivilegeCount10(answerList10[currentQuestionIndexv2] === "yes" ? privilegeCount10 + 1 : privilegeCount10);
-        setPadding10("pl-" + (privilegeCount10 * 3).toString() + "vw");
-        setWalk10(answerList10[currentQuestionIndexv2 - 1] === "yes");
     }
 
         
@@ -168,9 +131,8 @@ export function FirebaseContextProvider({ children }) {
     return <FirebaseContext.Provider 
                 value={{answerMatrix, setAnswerMatrix, writeUserData, answerList1, answerList2, 
                     answerList3, answerList4, answerList5, answerList6, answerList7, answerList8, answerList9, answerList10,
-                    setCurrentQuestionIndexv2, currentQuestionIndexv2, padding1, padding2, padding3, padding4, padding5, padding6, padding7,
-                    padding8, padding9, padding10, changePadding, walk, setWalk, walk1, walk2, walk3, walk4, walk5, walk6, walk7,
-                    walk8, walk9, walk10, setWalk1, setWalk2, setWalk3, setWalk4, setWalk5, setWalk6, setWalk7, setWalk8, setWalk9, setWalk10,
+                    setCurrentQuestionIndexv2, currentQuestionIndexv2, padding1, padding2, padding3, padding4, padding5, changePadding, walk, 
+                    setWalk, walk1, walk2, walk3, walk4, walk5, setWalk1, setWalk2, setWalk3, setWalk4, setWalk5,
                     mobilePadding1, mobilePadding2, mobilePadding3, mobilePadding4, changePaddingMobile}}
             >
             {children}

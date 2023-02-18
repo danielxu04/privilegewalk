@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
 import { FirebaseContext } from '../../contexts/database';
 import Question from './Question';
@@ -45,15 +45,15 @@ const Questionaire = () => {
             )}
             {!questionaireState.isComplete && !questionaireState.startClicked && (
                 <div>
-                    <MobileWindow />
-                    <Window />
-                    <div className="items-center flex flex-col">
+                    <div className="items-center flex flex-col mt-[4vw]">
                         <div className="block text-2xl text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">
                             Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
                         </div>
                         <Question />
                         <Answer onAnswerText={(answerText) => dispatch({type: "select_answer", payload: answerText})}/>
                     </div>
+                    <MobileWindow />
+                    <Window />
                 </div>
             )}
         </div>

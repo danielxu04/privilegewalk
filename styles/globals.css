@@ -66,103 +66,103 @@ body{
 /********************************************* DESKTOP MOVEMENT ********************************************/
 .pl-0vw{
   transition: 2s;
-  padding-left: 0vw;
+  left: 0vw;
 }
 .pl-3vw{
   transition: 2s;
-  padding-left: 3vw;
+  left: 3vw;
 }
 .pl-6vw{
   transition: 2s;
-  padding-left: 6vw;
+  left: 6vw;
 }
 .pl-9vw{
   transition: 2s;
-  padding-left: 9vw;
+  left: 9vw;
 }
 .pl-12vw{
   transition: 2s;
-  padding-left: 12vw;
+  left: 12vw;
 }
 .pl-15vw{
   transition: 2s;
-  padding-left: 15vw;
+  left: 15vw;
 }
 .pl-18vw{
   transition: 2s;
-  padding-left: 18vw;
+  left: 18vw;
 }
 .pl-21vw{
   transition: 2s;
-  padding-left: 21vw;
+  left: 21vw;
 }
 .pl-24vw{
   transition: 2s;
-  padding-left: 24vw;
+  left: 24vw;
 }
 .pl-27vw{
   transition: 2s;
-  padding-left: 27vw;
+  left: 27vw;
 }
 .pl-30vw{
   transition: 2s;
-  padding-left: 30vw;
+  left: 30vw;
 }
 .pl-33vw{
   transition: 2s;
-  padding-left: 33vw;
+  left: 33vw;
 }
 .pl-36vw{
   transition: 2s;
-  padding-left: 36vw;
+  left: 36vw;
 }
 .pl-39vw{
   transition: 2s;
-  padding-left: 39vw;
+  left: 39vw;
 }
 .pl-42vw{
   transition: 2s;
-  padding-left: 42vw;
+  left: 42vw;
 }
 .pl-45vw{
   transition: 2s;
-  padding-left: 45vw;
+  left: 45vw;
 }
 .pl-48vw{
   transition: 2s;
-  padding-left: 48vw;
+  left: 48vw;
 }
 .pl-51vw{
   transition: 2s;
-  padding-left: 51vw;
+  left: 51vw;
 }
 .pl-54vw{
   transition: 2s;
-  padding-left: 54vw;
+  left: 54vw;
 }
 .pl-57vw{
   transition: 2s;
-  padding-left: 57vw;
+  left: 57vw;
 }
 .pl-60vw{
   transition: 2s;
-  padding-left: 60vw;
+  left: 60vw;
 }
 .pl-63vw{
   transition: 2s;
-  padding-left: 63vw;
+  left: 63vw;
 }
 .pl-66vw{
   transition: 2s;
-  padding-left: 66vw;
+  left: 66vw;
 }
 .pl-69vw{
   transition: 2s;
-  padding-left: 69vw;
+  left: 69vw;
 }
 .pl-72vw{
   transition: 2s;
-  padding-left: 72vw;
+  left: 72vw;
 }
 .pl-75vw{
   transition: 2s;
@@ -170,15 +170,15 @@ body{
 }
 .pl-78vw{
   transition: 2s;
-  padding-left: 78vw;
+  left: 78vw;
 }
 .pl-81vw{
   transition: 2s;
-  padding-left: 81vw;
+  left: 81vw;
 }
 .pl-84vw{
   transition: 2s;
-  padding-left: 84vw;
+  left: 84vw;
 }
 
 

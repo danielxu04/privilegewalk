@@ -45,8 +45,15 @@ const Questionaire = () => {
             )}
             {!questionaireState.isComplete && !questionaireState.startClicked && (
                 <div>
-                    <div className="items-center flex flex-col mt-[4vw]">
+                    <div className="hidden items-center mt-[4vw] lg:flex lg:flex-col">
                         <div className="block text-2xl text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">
+                            Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
+                        </div>
+                        <Question />
+                        <Answer onAnswerText={(answerText) => dispatch({type: "select_answer", payload: answerText})}/>
+                    </div>
+                    <div className="flex items-center max-width-200 flex-col rotate-ccw-90 lg:hidden">
+                        <div className="block text-2xl mb-2 text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">
                             Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
                         </div>
                         <Question />

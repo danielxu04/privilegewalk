@@ -10,12 +10,12 @@ function MobileWindow() {
     const firebaseContext = useContext(FirebaseContext);
     
     return (
-        <div className="flex lg:hidden h-[65vh] px-6 my-8">
-            <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding1}/>
-            <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding2}/>
-            <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding3}/>
-            <MobileTrack mobilePlayerPadding={firebaseContext.mobilePadding4}/>
-            <MobilePlayerTrack mobileUserPadding={questionaireState.mobileTrackPadding}/>
+        <div className="flex lg:hidden h-[65vh] px-6 mb-6">
+            <MobilePlayerTrack walkBool={questionaireState.walk} setWalkBool={firebaseContext.setWalk} mobileUserPadding={questionaireState.mobileTrackPadding}/>
+            <MobileTrack walkBool={firebaseContext.walk1} setWalkBool={firebaseContext.setWalk1} mobilePlayerPadding={firebaseContext.mobilePadding1}/>
+            <MobileTrack walkBool={firebaseContext.walk2} setWalkBool={firebaseContext.setWalk2} mobilePlayerPadding={firebaseContext.mobilePadding2}/>
+            <MobileTrack walkBool={firebaseContext.walk3} setWalkBool={firebaseContext.setWalk3} mobilePlayerPadding={firebaseContext.mobilePadding3}/>
+            <MobileTrack walkBool={firebaseContext.walk4} setWalkBool={firebaseContext.setWalk4} mobilePlayerPadding={firebaseContext.mobilePadding4}/>
         </div>
     );
 }

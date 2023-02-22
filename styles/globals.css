@@ -379,6 +379,16 @@ body{
 .invert-img{
   transform: scaleX(-1);
 }
+.invert-img-y{
+  transform: rotate(-90deg) scaleX(-1);
+}
+.rotate-ccw-90{
+  transform: rotate(-90deg);
+}
+.max-width-200{
+  max-height: 220px;
+  max-width: 320px;
+}
 
 /********************************************** MOBILE TRACK ****************************************************/
 .mobile-player-track{

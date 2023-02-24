@@ -1,6 +1,8 @@
 import {useContext} from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
 
+import Shareable from './Shareable';
+
 function ResultPage(){
 
     const [questionaireState, dispatch] = useContext(QuestionaireContext);
@@ -17,7 +19,9 @@ function ResultPage(){
                 Thank you for participating in our virtual privilege walk! <br />
                 Your response has been recorded and will be used in future virtual privilege walks. 
             </div>
+            <Shareable />
         </div>
+        
         
     );
 }

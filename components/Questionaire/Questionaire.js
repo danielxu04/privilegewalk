@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { QuestionaireContext } from '../../contexts/questionaire';
 import { FirebaseContext } from '../../contexts/database';
 import Question from './Question';
-import ResultPage from './ResultPage';
+import ResultPage from '../ResultPage/ResultPage';
 import Answer from './Answer';
 import Window from '../PrivilegeWalk/Window';
 import MobileWindow from '../PrivilegeWalk/MobileWindow';
@@ -44,7 +44,7 @@ const Questionaire = () => {
                 <ResultPage />
             )}
             {!questionaireState.isComplete && !questionaireState.startClicked && (
-                <div>
+                <>
                     <div className="hidden items-center mt-[4vw] lg:flex lg:flex-col">
                         <div className="block text-2xl text-center text-white font-latoBold cream-textshadow cream-text lg:text-3xl">
                             Question {questionaireState.currentQuestionIndex + 1} / {questionaireState.questions.length}
@@ -61,7 +61,7 @@ const Questionaire = () => {
                     </div>
                     <MobileWindow />
                     <Window />
-                </div>
+                </>
             )}
         </div>
     );

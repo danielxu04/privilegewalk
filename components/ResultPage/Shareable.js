@@ -8,13 +8,13 @@ function Shareable() {
     const shareTitle = "Discourse Agency Privilege Walk";
 
     return (
-        <div className="block p-4 bg-white mx-auto">
+        <div className="block p-4 bg-transparent mx-auto">
             <span className="icon">
                 <FacebookShareButton 
                     url={shareUrl}
                     quote={shareText}
                 >
-                    <FacebookIcon />
+                    <FacebookIcon borderRadius={15}/>
                 </FacebookShareButton>
             </span>
             
@@ -25,7 +25,7 @@ function Shareable() {
                     url={shareUrl}
                     separator={"\n\n"}
                 >
-                    <EmailIcon />
+                    <EmailIcon borderRadius={15}/>
                 </EmailShareButton>
             </span>
 
@@ -34,7 +34,7 @@ function Shareable() {
                     url={shareUrl}
                     title={shareText}
                 >
-                    <LinkedinIcon />
+                    <LinkedinIcon borderRadius={15}/>
                 </LinkedinShareButton>
             </span>
 
@@ -43,7 +43,7 @@ function Shareable() {
                     url={shareUrl}
                     title={shareText}
                 >
-                    <RedditIcon />
+                    <RedditIcon borderRadius={15}/>
                 </RedditShareButton>
             </span>
 
@@ -52,7 +52,7 @@ function Shareable() {
                     url={shareUrl}
                     title={shareText}
                 >
-                    <TwitterIcon />
+                    <TwitterIcon borderRadius={15}/>
                 </TwitterShareButton>
             </span>
 
@@ -62,7 +62,7 @@ function Shareable() {
                     title={shareText}
                     separator={"\n\n"}
                 >
-                    <WhatsappIcon />
+                    <WhatsappIcon borderRadius={15}/>
                 </WhatsappShareButton>
             </span>
         </div>

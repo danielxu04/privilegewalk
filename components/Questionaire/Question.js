@@ -13,8 +13,8 @@ const Question = () => {
 
     return (
         <div 
-            className="flex h-[50vw] w-[35vw] py-[18vw] items-center text-xs text-center p-2 mt-2 mx-[5vw] darkblue-text font-interSemiBold  
-            cream-boxshadow cream-background rounded-xl xl:text-2xl xl:w-[60vw] xl:h-[7vw] xl:px-10 xl:py-5 xl:mt-3">
+            className="flex text-center h-[50vw] w-[35vw] py-[18vw] items-center text-xs p-2 mt-2 mx-[5vw] darkblue-text font-interSemiBold  
+            cream-boxshadow cream-background rounded-xl xl:text-2xl xl:w-[60vw] xl:h-[7vw] xl:px-10 xl:py-5 xl:mt-3 xl:justify-center">
                 {currentQuestion.question}
         </div>
     );
